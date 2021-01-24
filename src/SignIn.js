@@ -10,14 +10,14 @@ export default function SignIn() {
   //   validateEmail(email){}
   //   handleChange(e){}
   return (
-    <div>
-      <div className="logo">
+    <div className="form-container">
+      <div className="logo-container">
         {/* <img src={logo} alt="Logo" /> */}
-        <p>MERGE DEVELOPMENT</p>
+        <p className="logo-text">MERGE DEVELOPMENT</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h1>Sign Up</h1>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <h1>Sign In</h1>
 
         <label>Email</label>
         <input
