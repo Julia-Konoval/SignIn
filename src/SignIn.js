@@ -13,11 +13,16 @@ export default function SignIn() {
     <div className="form-container">
       <div className="logo-container">
         {/* <img src={logo} alt="Logo" /> */}
-        <p className="logo-text">MERGE DEVELOPMENT</p>
+        <h2 className="logo-text">MERGE DEVELOPMENT</h2>
       </div>
 
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <h1>Sign In</h1>
+
+        <div className="no-account">
+          <p>Don't have an Xcellerate account? </p>
+          <p className="blue-text"> Sign up now.</p>
+        </div>
 
         <label>Email</label>
         <input
@@ -44,7 +49,7 @@ export default function SignIn() {
           <p>Password is required</p>
         )}
 
-        <input type="submit" />
+        <button type="submit">Sign in </button>
       </form>
     </div>
   );
