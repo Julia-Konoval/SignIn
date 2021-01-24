@@ -6,13 +6,12 @@ export default function SignIn() {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
 
-  console.log(watch("example")); // watch input value by passing the name of it
-  //   validateEmail(email){}
-  //   handleChange(e){}
+  console.log(watch("example")); 
+
   return (
     <div className="form-container">
       <div className="logo-container">
-        {/* <img src={logo} alt="Logo" /> */}
+        <img className="logo-img" src={logo} alt="Logo" />
         <h2 className="logo-text">MERGE DEVELOPMENT</h2>
       </div>
 
@@ -40,6 +39,7 @@ export default function SignIn() {
         <label>Password</label>
         <input
           name="password"
+          placeholder="Forgot your password?"
           ref={register({
             required: true,
             maxLength: 17,
@@ -48,8 +48,12 @@ export default function SignIn() {
         {errors.password && errors.password.type === "required" && (
           <p>Password is required</p>
         )}
-
         <button type="submit">Sign in </button>
+        <nav className="footer">
+          <li>Contact</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+        </nav>
       </form>
     </div>
   );
