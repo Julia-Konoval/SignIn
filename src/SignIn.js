@@ -6,7 +6,7 @@ export default function SignIn() {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
 
-  console.log(watch("example")); 
+  console.log(watch("example"));
 
   return (
     <div className="form-container">
@@ -49,12 +49,12 @@ export default function SignIn() {
           <p>Password is required</p>
         )}
         <button type="submit">Sign in </button>
-        <nav className="footer">
-          <li>Contact</li>
-          <li>Privacy</li>
-          <li>Terms</li>
-        </nav>
       </form>
+      <nav className="footer">
+        <li>Contact</li>
+        <li>Privacy</li>
+        <li>Terms</li>
+      </nav>
     </div>
   );
 }

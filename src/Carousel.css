@@ -1,0 +1,44 @@
+.carousel-container {
+  background-image: linear-gradient(110deg, #0751e1 0%, #074cd2 100%);
+  display: flex;
+  align-items: center;
+  color: #c6d0e0;
+  border-radius: 10px;
+  margin: 10px;
+  height: 97%;
+  width: 60%;
+}
+.carousel-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.carousel-container p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+.carousel .slide {
+  background-color: transparent;
+  padding: 7%;
+}
+
+.carousel-slider {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel .slide img {
+  width: 90%;
+  box-shadow: 0 10px 20px 10px #00000073;
+}
+
+.carousel .slider-wrapper {
+  width: 85%;
+}
+.carousel .description {
+  margin: 55px;
+  line-height: 22px;
+}
