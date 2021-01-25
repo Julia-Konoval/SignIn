@@ -1,66 +1,71 @@
 .App {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-h1 {
   font-family: "Montserrat", sans-serif;
+}
+.form-container h1 {
   font-size: 28px;
   font-weight: 600;
+  margin: 0;
 }
-h2 {
-  font-family: "Montserrat", sans-serif;
+.form-container h2 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
+  margin-top: 13px;
 }
-
+label {
+  display: flex;
+  justify-content: space-between;
+}
+label span {
+  color: red;
+}
 p,
 li,
 button {
-  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   margin-right: 2px;
+  font-weight: 600;
 }
 .blue-text {
   color: #065bea;
 }
 .no-account {
   display: flex;
-  flex-direction: row;
+  margin-bottom: 60px;
 }
 .form-container {
   width: 40%;
+  height: 94%;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 0.7;
+}
+.form-wrap {
+  display: flex;
+  flex-direction: column;
   color: #333333;
-  margin-top: 50px;
-  margin-left: 50px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 70px;
-}
-
-.form > label:nth-child(3) {
-  margin-top: 60px;
+  height: 100%;
+  width: 75%;
+  margin: auto;
 }
 
 input {
   margin-top: 7px;
   margin-bottom: 30px;
 }
-input::-webkit-input-placeholder {
+input::placeholder {
   text-align: right;
+  font-weight: 600;
 }
 button,
 input {
   padding: 13px;
-  width: 80%;
   border: 1px solid #065bea;
   border-radius: 5px;
 }
@@ -68,23 +73,31 @@ input {
 button {
   background-color: #065bea;
   color: white;
-  width: 85%;
   box-shadow: -5px 27px 33px -18px #1a3788;
   -webkit-box-shadow: -5px 27px 33px -18px#1a3788;
   -moz-box-shadow: -5px 27px 33px -18px #1a3788;
+  cursor: pointer;
+  border: none;
 }
 
+button:hover {
+  background-color: #0745b0;
+}
+button:active {
+  box-shadow: -5px 27px 33px -20px #1a3788;
+}
+button:disabled {
+  background-color: #c6d0e0;
+}
 .footer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 1rem;
-  padding: 1rem;
-  position: fixed;
-  bottom: 40px;
-  right: 20vw;
-  width: 20%;
   list-style-type: none;
+  flex: 0.1;
+  align-items: end;
+  width: 50%;
+  justify-content: space-around;
+  color: #75777a;
+  font-weight: 300;
 }
 
 .logo-img {
@@ -95,22 +108,5 @@ button {
 .logo-container {
   display: flex;
   flex-direction: row;
+  flex: 0.2;
 }
-
-/* Вбудований #4 | http://localhost:3000/ */
-
-/* .footer { */
-  /* justify-content: space-around; */
-  /* margin-top: 1rem; */
-  /* padding: 1rem; */
-  /* bottom: 40px; */
-  /* right: 20vw; */
-  /* width: 20%; */
-  /* bottom: 5%;
-  width: 40%;
-  justify-content: space-evenly;
-}
-
-.form {
-  margin-bottom: 50px;
-} */

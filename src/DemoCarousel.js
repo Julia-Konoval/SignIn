@@ -5,13 +5,7 @@ import "./Carousel.css";
 
 const DemoCarousel = () => {
   return (
-    <Carousel
-      showArrows={false}
-      showStatus={false}
-      showThumbs={false}
-      autoPlay
-      className="carousel-container"
-    >
+    <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay>
       <div>
         <img
           className="carousel-img"
@@ -31,7 +25,7 @@ const DemoCarousel = () => {
           className="carousel-img"
           src="https://themes-backend.material-ui.com/wp-content/uploads/2020/02/carolina-react-admin-dashboard-pro.png"
           alt=""
-        />{" "}
+        />
         <div className="description">
           <h2>Fund Platform</h2>
           <p>Hedge funds wealth management</p>
@@ -48,7 +42,7 @@ const DemoCarousel = () => {
           <p>Management Platform</p>
         </div>
       </div>
-      <div className="className='description-container'">
+      <div>
         <img
           className="carousel-img"
           src="https://themes-backend.material-ui.com/wp-content/uploads/2020/02/carolina-react-admin-dashboard-pro.png"
