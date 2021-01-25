@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "./images/logo.PNG";
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
 
 export default function SignIn() {
   const { register, handleSubmit, errors } = useForm();
@@ -10,15 +8,6 @@ export default function SignIn() {
   const [disabled, setDisabled] = useState(false);
   const [value, setValue] = useState("");
 
-  useEffect(() => {}, []);
-  const theme = createMuiTheme({
-    palette: {
-      action: {
-        disabledBackground: "#c6e0d0",
-        disabled: "white",
-      },
-    },
-  });
   return (
     <div className="form-container">
       <div className="form-wrap">
@@ -36,6 +25,7 @@ export default function SignIn() {
           </div>
 
           <label>Email {errors.email && <span>Invalid Email</span>}</label>
+
           <input
             name="email"
             ref={register({
@@ -65,20 +55,18 @@ export default function SignIn() {
             style={{
               border: errors.password ? "1px solid red" : "",
             }}
-            
             type="text"
           />
-          <ThemeProvider theme={theme}>
-            <button
-              type="submit"
-              disabled={!value}
-              style={{
-                background: disabled ? "#c6d0e0" : "",
-              }}
-            >
-              Sign in{" "}
-            </button>
-          </ThemeProvider>
+
+          <button
+            type="submit"
+            disabled={!value}
+            style={{
+              background: disabled ? "#c6d0e0" : "",
+            }}
+          >
+            Sign in{" "}
+          </button>
         </form>
         <nav className="footer">
           <li>Contact</li>

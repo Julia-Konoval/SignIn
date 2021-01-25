@@ -69,7 +69,6 @@ input {
   border: 1px solid #065bea;
   border-radius: 5px;
 }
-
 button {
   background-color: #065bea;
   color: white;
@@ -109,4 +108,33 @@ button:disabled {
   display: flex;
   flex-direction: row;
   flex: 0.2;
+}
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 85%;
+    height: 60%;
+  }
+
+  .form-wrap {
+    width: 95%;
+  }
+
+  .no-account {
+    margin-bottom: 4%;
+  }
+
+  .carousel-root {
+    height: 40%;
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
