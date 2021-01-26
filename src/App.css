@@ -92,7 +92,7 @@ button:disabled {
   display: flex;
   list-style-type: none;
   flex: 0.1;
-  align-items: end;
+  align-items: flex-end;
   width: 50%;
   justify-content: space-around;
   color: #75777a;

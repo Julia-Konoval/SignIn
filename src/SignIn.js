@@ -3,10 +3,11 @@ import { useForm } from "react-hook-form";
 import logo from "./images/logo.PNG";
 
 export default function SignIn() {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm({ mode: "onBlur" });
+  const [emailText, setEmailText] = useState("");
+  const [passwordText, setPasswordText] = useState("");
+
   const onSubmit = (data) => console.log(data);
-  const [disabled, setDisabled] = useState(false);
-  const [value, setValue] = useState("");
 
   return (
     <div className="form-container">
@@ -25,17 +26,20 @@ export default function SignIn() {
           </div>
 
           <label>Email {errors.email && <span>Invalid Email</span>}</label>
-
           <input
             name="email"
             ref={register({
-              required: !disabled,
+              required: true,
               minLength: 4,
               pattern: /^\S+@\S+$/i,
             })}
-            onChange={(e) => setValue({ value: e.target.value })}
+            onChange={(e) => setEmailText(e.target.value)}
             style={{
-              border: errors.email ? "1px solid red" : "",
+              border: errors.email
+                ? "1px solid red"
+                : emailText.length > 5
+                ? "1px solid green"
+                : "",
             }}
             type="text"
           />
@@ -47,25 +51,33 @@ export default function SignIn() {
             name="password"
             placeholder="Forgot your password?"
             ref={register({
-              required: !disabled,
+              required: true,
               maxLength: 17,
               minLength: 6,
             })}
-            onChange={(e) => setValue({ value: e.target.value })}
+            onChange={(e) => setPasswordText(e.target.value)}
             style={{
-              border: errors.password ? "1px solid red" : "",
+              border: errors.password
+                ? "1px solid red"
+                : passwordText.length > 5
+                ? "1px solid green"
+                : "",
             }}
             type="text"
           />
 
           <button
             type="submit"
-            disabled={!value}
-            style={{
-              background: disabled ? "#c6d0e0" : "",
-            }}
+            disabled={
+              errors.email ||
+              errors.password ||
+              passwordText.length < 1 ||
+              emailText.length < 1
+                ? true
+                : false
+            }
           >
-            Sign in{" "}
+            Sign in
           </button>
         </form>
         <nav className="footer">
